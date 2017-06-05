@@ -13,4 +13,10 @@ ClickCounter.propTypes = {
   setCount: PropTypes.func.isRequired,
 }
 
-export default ClickCounter
+/*
+ * Implement the following state:
+ *     count/setCount with default value 0
+ */
+const EnhancedClickCounter = ClickCounter;
+
+export default EnhancedClickCounter;

@@ -25,4 +25,10 @@ DumbCalculator.propTypes = {
   setNum: PropTypes.func.isRequired,
 }
 
+/*
+ * Implement the following state:
+ *     num/setNum with default value 18
+ */
+let EnhancedDumbCalculator = DumbCalculator;
+
 export default DumbCalculator

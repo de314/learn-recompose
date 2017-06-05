@@ -19,4 +19,10 @@ EchoText.propTypes = {
   setText: PropTypes.func.isRequired,
 }
 
+/*
+ * Implement the following state:
+ *     text/setText with default value ''
+ */
+let EnhancedEchoText = EchoText;
+
 export default EchoText

@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf, action, linkTo } from '@kadira/storybook';
+import { storiesOf, action, linkTo, setAddon } from '@kadira/storybook';
 import { withState, withHandlers, compose } from 'recompose';
 
 import Welcome from './Welcome';
@@ -16,22 +16,10 @@ import EchoText from './withState/EchoText';
 import DumbCalculator from './withState/DumbCalculator';
 
 storiesOf('withState', module)
-  .add('CLick Counter', () => {
-    const EnhancedClickCounter = withState('count', 'setCount', 0)(ClickCounter);
-    return (<EnhancedClickCounter />);
-  })
-  .add('Light Switch', () => {
-    const EnhancedLightSwitch = compose(withState('isOn', 'setIsOn', false))(LightSwitch);
-    return (<EnhancedLightSwitch />);
-  })
-  .add('Echo Text', () => {
-    const EnhancedEchoText = compose(withState('text', 'setText', ''))(EchoText);
-    return (<EnhancedEchoText />);
-  })
-  .add('Dumb Calculator', () => {
-    const EnhancedDumbCalculator = compose(withState('num', 'setNum', 0))(DumbCalculator);
-    return (<EnhancedDumbCalculator />);
-  });
+  .add('CLick Counter', () => (<ClickCounter />))
+  .add('Light Switch', () => (<LightSwitch />))
+  .add('Echo Text', () => (<EchoText />))
+  .add('Dumb Calculator', () => (<DumbCalculator />));
 
 // withHandlers
 import HelloWorld from './withHandlers/HelloWorld';

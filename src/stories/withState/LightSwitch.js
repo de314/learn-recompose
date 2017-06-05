@@ -23,4 +23,10 @@ LightSwitch.propTypes = {
   setIsOn: PropTypes.func.isRequired,
 }
 
+/*
+ * Implement the following state:
+ *     isOn/setIsOn with default value false
+ */
+let EnhancedLightSwitch = LightSwitch;
+
 export default LightSwitch
