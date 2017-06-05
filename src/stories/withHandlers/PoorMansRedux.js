@@ -18,7 +18,7 @@ const PoorMansRedux = ({
         Property Name <input value={field} onChange={e => setField(e.target.value)}/>
       </div>
       <div>
-        Property Value <input value={field} onChange={e => onChangeFieldValue(e.target.value)}/>
+        Property Value <input value={fieldValue} onChange={e => onChangeFieldValue(e.target.value)}/>
       </div>
       <div style={{ width: "100%", backgroundColor: "#ddd", padding: 15 }}>
         <pre>{JSON.stringify(model, null, 2)}</pre>
