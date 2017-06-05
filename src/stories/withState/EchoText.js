@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { withState } from 'recompose'
 
 const EchoText = ({ text, setText }) => {
   return (
@@ -25,4 +26,4 @@ EchoText.propTypes = {
  */
 let EnhancedEchoText = EchoText;
 
-export default EchoText
+export default EnhancedEchoText

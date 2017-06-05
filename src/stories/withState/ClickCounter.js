@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { withState } from 'recompose'
 
 const ClickCounter = ({ count, setCount }) => (
   <div className="ClickCounter">

@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { withState } from 'recompose'
 
 const LightSwitch = ({ isOn, setIsOn }) => {
   let backgroundColor = 'black';
@@ -29,4 +30,4 @@ LightSwitch.propTypes = {
  */
 let EnhancedLightSwitch = LightSwitch;
 
-export default LightSwitch
+export default EnhancedLightSwitch

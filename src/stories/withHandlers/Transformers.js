@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { compose, withHandlers, withState } from 'recompose'
 
 const Transformers = ({
   message, setMessage,
@@ -37,4 +38,4 @@ Transformers.propTypes = {
  */
 const EnhancedTransformers = Transformers;
 
-export default Transformers
+export default EnhancedTransformers

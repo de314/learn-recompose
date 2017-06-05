@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { compose, withHandlers, withState } from 'recompose'
 
 const CustomMessage = ({ message, setMessage, onClick }) => {
   return (
@@ -27,4 +28,4 @@ CustomMessage.propTypes = {
  */
 const EnhancedCustomMessage = CustomMessage;
 
-export default CustomMessage
+export default EnhancedCustomMessage
