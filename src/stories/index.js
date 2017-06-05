@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf, action, linkTo, setAddon } from '@kadira/storybook';
+import { storiesOf, action, linkTo, setAddon } from '@storybook/react';
 import { withState, withHandlers, compose } from 'recompose';
 
 import Welcome from './Welcome';
@@ -16,7 +16,7 @@ import EchoText from './withState/EchoText';
 import DumbCalculator from './withState/DumbCalculator';
 
 storiesOf('withState', module)
-  .add('CLick Counter', () => (<ClickCounter />))
+  .add('Click Counter', () => (<ClickCounter />))
   .add('Light Switch', () => (<LightSwitch />))
   .add('Echo Text', () => (<EchoText />))
   .add('Dumb Calculator', () => (<DumbCalculator />));

@@ -1,1 +1,1 @@
-import '@kadira/storybook/addons'
+import '@storybook/react/addons'

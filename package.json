@@ -3,9 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "@kadira/storybook": "^2.35.3",
+    "@storybook/react": "3.0.1",
     "react-scripts": "1.0.7",
-    "storybook-addon-jsx": "^4.1.0"
   },
   "dependencies": {
     "react": "15.5.4",
