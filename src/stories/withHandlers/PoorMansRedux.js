@@ -18,7 +18,7 @@ const PoorMansRedux = ({
         Property Name <input value={field} onChange={e => setField(e.target.value)}/>
       </div>
       <div>
-        Property Value <input value={field} onChange={e => onChangeFieldValue(e.target.value)}/>
+        Property Value <input value={fieldValue} onChange={e => onChangeFieldValue(e.target.value)}/>
       </div>
       <div style={{ width: "100%", backgroundColor: "#ddd", padding: 15 }}>
         <pre>{JSON.stringify(model, null, 2)}</pre>
@@ -45,6 +45,18 @@ PoorMansRedux.propTypes = {
  *     onChangeFieldValue: Takes new fieldValue as input. Updates model at
  *         model[field] = fieldValue. Sets the model, then sets the fieldValue.
  */
-const EnhancedPoorMansRedux = PoorMansRedux;
+const EnhancedPoorMansRedux = compose(
+  withState('field', 'setField', ''),
+  withState('fieldValue', 'setFieldValue', ''),
+  withState('model', 'setModel', {}),
+  withHandlers({
+    onChangeFieldValue: props => newValue => {
+      const { setFieldValue, model, setModel, field } = props;
+      setFieldValue(newValue);
+      model[field] = newValue;
+      setModel(model);
+    }
+  })
+)(PoorMansRedux);
 
 export default EnhancedPoorMansRedux
