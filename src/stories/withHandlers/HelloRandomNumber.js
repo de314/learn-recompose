@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { withHandlers } from 'recompose'
 
 const HelloRandomNumber = ({ onClick }) => {
   /*
@@ -29,6 +30,8 @@ HelloRandomNumber.propTypes = {
  * Implement the following handlers:
  *     onClick: Take a random number as input, then `alert` the number.
  */
-const EnhancedHelloRandomNumber = HelloRandomNumber;
+const EnhancedHelloRandomNumber = withHandlers({
+  onClick: () => (randomNumber) => alert(randomNumber)
+})(HelloRandomNumber);
 
 export default EnhancedHelloRandomNumber;

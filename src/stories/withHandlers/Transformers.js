@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { compose, withHandlers, withState } from 'recompose'
 
 const Transformers = ({
   message, setMessage,
@@ -28,13 +29,23 @@ Transformers.propTypes = {
 }
 
 /*
- * Implement the following state: message/setMessage
+ * You will be provided a function `showMessage` as a component prop.
+ *
+ * Implement the following state:
+ *     message/setMessage with default value ''
+ *
  * Implement the following handlers:
  *     showBigMessage: Takes a message as input, transforms it to upper case and
  *         passes the new message to the showMessage prop.
  *     showSmallMessage: Takes a message as input, transforms it to upper case
  *         and passes the new message to the showMessage prop.
  */
-const EnhancedTransformers = Transformers;
+const EnhancedTransformers = compose(
+  withState('message', 'setMessage', ''),
+  withHandlers({
+    showBigMessage: ({ showMessage }) => message => showMessage(message.toUpperCase()),
+    showSmallMessage: ({ showMessage }) => message => showMessage(message.toLowerCase()),
+  })
+)(Transformers);
 
-export default Transformers
+export default EnhancedTransformers

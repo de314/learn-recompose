@@ -18,6 +18,8 @@ HelloWorld.propTypes = {
  * Implement the following handlers:
  *     onClick: Alert the message "Hello, World!"
  */
-const EnhancedHelloWorld = HelloWorld;
+const EnhancedHelloWorld = withHandlers({
+  onClick: () => () => alert("Hello, World!")
+})(HelloWorld);
 
 export default EnhancedHelloWorld;

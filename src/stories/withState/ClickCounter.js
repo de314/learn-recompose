@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { withState } from 'recompose'
 
 const ClickCounter = ({ count, setCount }) => (
   <div className="ClickCounter">
@@ -17,6 +18,6 @@ ClickCounter.propTypes = {
  * Implement the following state:
  *     count/setCount with default value 0
  */
-const EnhancedClickCounter = ClickCounter;
+const EnhancedClickCounter = withState('count', 'setCount', 0)(ClickCounter)
 
 export default EnhancedClickCounter;

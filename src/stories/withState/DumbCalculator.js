@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { withState } from 'recompose'
 
 const DumbCalculator = ({ num, setNum }) => {
   return (
@@ -29,6 +30,6 @@ DumbCalculator.propTypes = {
  * Implement the following state:
  *     num/setNum with default value 18
  */
-let EnhancedDumbCalculator = DumbCalculator;
+let EnhancedDumbCalculator = withState('num', 'setNum', 18)(DumbCalculator);
 
-export default DumbCalculator
+export default EnhancedDumbCalculator

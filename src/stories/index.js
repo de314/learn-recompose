@@ -31,4 +31,4 @@ storiesOf('withHandlers', module)
   .add('Hello World', () => (<HelloWorld />))
   .add('Hello Random Number', () => (<HelloRandomNumber />))
   .add('Custom Message', () => (<CustomMessage />))
-  .add('Transformers', () => (<Transformers />));
+  .add('Transformers', () => (<Transformers showMessage={(message) => alert(message)} />));

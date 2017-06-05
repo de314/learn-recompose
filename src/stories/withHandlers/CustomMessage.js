@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { compose, withHandlers, withState } from 'recompose'
 
 const CustomMessage = ({ message, setMessage, onClick }) => {
   return (
@@ -21,10 +22,16 @@ CustomMessage.propTypes = {
 }
 
 /*
- * Implement the following state: message/setMessage
+ * Implement the following state:
+ *     message/setMessage with default value ''
  * Implement the following handlers:
- *     showMessage: Take a message as input, then `alert` the message.
+ *     onClick: Take a message as input, then `alert` the message.
  */
-const EnhancedCustomMessage = CustomMessage;
+const EnhancedCustomMessage = compose(
+  withState('message', 'setMessage', ''),
+  withHandlers({
+    onClick: () => (message) => alert(message)
+  })
+)(CustomMessage);
 
-export default CustomMessage
+export default EnhancedCustomMessage
