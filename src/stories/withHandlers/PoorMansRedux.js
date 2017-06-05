@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { compose, withHandlers, withState } from 'recompose'
 
 const PoorMansRedux = ({
   field, setField,
@@ -39,10 +40,11 @@ PoorMansRedux.propTypes = {
  *     field/setField with default value ''
  *     fieldValue/setFieldValue with default value ''
  *     model/setModel with default value {}
+ *
  * Implement the following handlers:
  *     onChangeFieldValue: Takes new fieldValue as input. Updates model at
  *         model[field] = fieldValue. Sets the model, then sets the fieldValue.
  */
 const EnhancedPoorMansRedux = PoorMansRedux;
 
-export default PoorMansRedux
+export default EnhancedPoorMansRedux
