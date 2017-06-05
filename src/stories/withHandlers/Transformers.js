@@ -29,7 +29,11 @@ Transformers.propTypes = {
 }
 
 /*
- * Implement the following state: message/setMessage
+ * You will be provided a function `showMessage` as a component prop.
+ *
+ * Implement the following state:
+ *     message/setMessage with default value ''
+ *
  * Implement the following handlers:
  *     showBigMessage: Takes a message as input, transforms it to upper case and
  *         passes the new message to the showMessage prop.

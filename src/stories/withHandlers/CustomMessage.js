@@ -22,9 +22,10 @@ CustomMessage.propTypes = {
 }
 
 /*
- * Implement the following state: message/setMessage
+ * Implement the following state:
+ *     message/setMessage with default value ''
  * Implement the following handlers:
- *     showMessage: Take a message as input, then `alert` the message.
+ *     onClick: Take a message as input, then `alert` the message.
  */
 const EnhancedCustomMessage = CustomMessage;
 
