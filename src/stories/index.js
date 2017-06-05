@@ -1,6 +1,5 @@
 import React from 'react';
 import { storiesOf, action, linkTo, setAddon } from '@storybook/react';
-import { withState, withHandlers, compose } from 'recompose';
 
 import Welcome from './Welcome';
 
@@ -26,9 +25,11 @@ import HelloWorld from './withHandlers/HelloWorld';
 import HelloRandomNumber from './withHandlers/HelloRandomNumber';
 import CustomMessage from './withHandlers/CustomMessage';
 import Transformers from './withHandlers/Transformers';
+import PoorMansRedux from './withHandlers/PoorMansRedux';
 
 storiesOf('withHandlers', module)
   .add('Hello World', () => (<HelloWorld />))
   .add('Hello Random Number', () => (<HelloRandomNumber />))
   .add('Custom Message', () => (<CustomMessage />))
-  .add('Transformers', () => (<Transformers showMessage={(message) => alert(message)} />));
+  .add('Transformers', () => (<Transformers showMessage={(message) => alert(message)} />))
+  .add('Poor Man\'s Redux', () => (<PoorMansRedux />));
